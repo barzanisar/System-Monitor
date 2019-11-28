@@ -26,6 +26,7 @@ int TotalProcesses();
 int RunningProcesses();
 std::string OperatingSystem();
 std::string Kernel();
+template <typename TT> TT ReadValueFromFile(const std::string& keyToFind, const std::string& filename);
 
 // CPU
 enum CPUStates {
@@ -40,11 +41,13 @@ enum CPUStates {
   kGuest_,
   kGuestNice_
 };
-std::vector<std::string> CpuUtilization();
-long Jiffies();
-long ActiveJiffies();
+const size_t CPUStatesCount = 10;
+
+std::vector<uint> CpuUtilization();
+// long Jiffies();
+// long ActiveJiffies();
 long ActiveJiffies(int pid);
-long IdleJiffies();
+// long IdleJiffies();
 
 // Processes
 std::string Command(int pid);
