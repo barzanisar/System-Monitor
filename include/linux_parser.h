@@ -44,10 +44,8 @@ enum CPUStates {
 const size_t CPUStatesCount = 10;
 
 std::vector<uint> CpuUtilization();
-// long Jiffies();
-// long ActiveJiffies();
 long ActiveJiffies(int pid);
-// long IdleJiffies();
+
 
 // Processes
 std::string Command(int pid);

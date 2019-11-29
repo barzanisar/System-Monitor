@@ -5,7 +5,7 @@
 
 Processor::Processor(): prevIdle_(0), prevNonIdle_(0){}
 
-// TODO: Return the aggregate CPU utilization
+// Return the aggregate CPU utilization
 float Processor::Utilization() {
   using namespace LinuxParser;
   std::vector<uint> utils = CpuUtilization();
